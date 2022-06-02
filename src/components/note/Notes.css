@@ -1,5 +1,72 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.main_notes{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+}
+.header{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #07C8F9;
+    text-shadow:  0 0 5px #07c8f980;;
+}
+.searchContainer{
+    width: 70%;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #07C8F9;
+    border-radius: 77px;
+    box-shadow: 0 0 5px #07c8f980;
+}
+.searchInput{
+    outline: none;
+    border: none;
+    padding: 5px 16px;
+    font-size: 15px;
+    width: 90%;
+    border-radius: 7px;
+    background: transparent;
+    color:#07C8F9;
+    font-weight: 500;
+}
+.searchLogo{
+    margin: auto;
+    padding: 0px 13px;
+    border-left: 1px solid #07C8F9;
+}
+.notes{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form_addNote{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.input_noteTitle{}
+.input_noteBody{}
+.note{
+    flex: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: coral;
+    border: 2px solid black;
+    margin:5px ;
+    padding: 13px;
+    border-radius: 7px;
 }

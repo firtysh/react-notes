@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+.main_home {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -82,7 +82,7 @@ body {
     justify-content: center;
 }
 
-input {
+.input {
     height: 42px;
     line-height: 2;
     padding: 1px 12px;
@@ -95,12 +95,12 @@ input {
     color: #07C8F9;
 }
 
-input::placeholder {
+.input::placeholder {
     color: #09a5f367;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input:focus {
+.input:focus {
     outline: none;
     border-bottom: 3px solid #0C63E7;
 }
