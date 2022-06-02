@@ -4,32 +4,63 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.notesBackdrop1{
+    overflow: hidden;
+    position: absolute;
+    left: -50vw; 
+    top:-19vh; 
+    width: 110vw;
+    height: 50vh;
+    border-radius: 50%;
+    background: rgb(7, 200, 249);
+    background: linear-gradient(241deg, rgba(7, 200, 249, 1) 0%, rgba(13, 65, 225, 1) 90%);
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+.notesBackdrop2{
+    overflow: hidden;
+    position: absolute;
+    left: 40vw;
+    top:79vh; 
+    width: 110vw;
+    height: 50vh;
+    border-radius: 50%;
+    background: rgb(13,65,225);
+    background: linear-gradient(241deg, rgba(13,65,225,1) 0%, rgba(7,200,249,1) 90%);
+    z-index: -1;
 }
 .container{
     width: 85vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow: hidden;
     padding: 10px;
 }
+
 .header{
-    margin: 10px;
+    margin: 50px auto;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 25px;
-    color: #07C8F9;
-    text-shadow:  0 0 5px #07c8f980;;
+    color: #0A85ED;
+    text-shadow:  0 0 5px #07c8f92c;
+    mix-blend-mode:color-dodge;
 }
 .searchContainer{
     width: 70%;
     display: flex;
     align-items: stretch;
-    border: 1px solid #07C8F9;
+    border: 0.1px solid #07c8f99b;
     border-radius: 77px;
-    box-shadow: 0 0 5px #07c8f980;
+    box-shadow: 0 0 5px #07c8f92c;
 }
 .searchInput{
     outline: none;
@@ -49,24 +80,117 @@
 }
 .notes{
     width: 95%;
+    height: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    overflow-y: auto;
 }
-.form_addNote{
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-}
-.input_noteTitle{}
-.input_noteBody{}
 .note{
+    min-height: 200px;
     flex: 100%;
     display: flex;
     flex-direction: column;
-    background-color: coral;
-    border: 2px solid black;
+    /* background:#07c8f952; */
+    /* border: 2px solid #07c8f9e9; */
+    margin:7px ;
+    border-radius: 7px;
+}
+.note_title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 13px;
+    background-color:#0186a752 ;
+    border-radius: 7px 7px 0px 0px;
+    color:black;
+    font-size: 17px;
+    min-height: 50px;
+}
+.note_body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 13px;
+    background-color:#0ac6f652 ;
+    color:black;
+    font-size: 16px;
+    min-height: 100px;
+    text-align: justify;
+}
+.note_footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#0ac6f652 ;
+    border-radius: 0px 0px 7px 7px;
+}
+.note_time{
+
+}
+.note_controls span {
+    margin-left: 7px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    border: 0.3px solid #07c8f929;
+    background-color: #0c64e78d;
+border-radius: 5px;
+padding: 7px;
+}
+
+hr{
+    border:.5px solid #07c8f99d;
+}
+
+
+
+
+
+.addNote{
+    border-bottom: 4px solid transparent;
+    box-shadow: 0 0 5px #07c8f95f;
+    background-color:#07c8f929 ;
     margin:5px ;
     padding: 13px;
     border-radius: 7px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color:#07C8F9;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    mix-blend-mode:color-dodge;
+}
+
+.addNote:hover{
+    border-bottom: 4px solid #0D41E1;
+    box-shadow: 0 0 7px #07c8f93e;
+    text-shadow: 0 0 5px #07c8f93e;
+    color:#0D41E1
+}
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+.modal_main{
+    position: fixed;
+}
+
+
+
+
+::-webkit-scrollbar{
+    width: 5px;
+    /* background: transparent; */
+}
+::-webkit-scrollbar-track{
+    background: #07c8f910;
+    border-radius: 99px;
+}
+::-webkit-scrollbar-thumb{
+    background:#07C8F9;
+    border-radius: 99px;
 }
