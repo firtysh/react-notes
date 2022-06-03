@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Home.css'
-function Home({ setRerender,setAppdata,appData }) {
-    console.log(appData,'homw');
+function Home({setAppdata, appData }) {
     const [name, setName] = useState(
         {
             firstName: '',
@@ -23,17 +22,16 @@ function Home({ setRerender,setAppdata,appData }) {
         const userData = {
             ...name,
             notes: [],
-            count:0,
+            count: 0,
             flag: true,
         }
         appData.set(userData);
-        setAppdata((prevData)=>{
+        setAppdata((prevData) => {
             return {
                 ...prevData,
-                data:userData
+                data: userData
             }
         })
-        // setRerender(true)
         navigate('/notes', { replace: true });
     };
 

@@ -7,7 +7,6 @@ import Modal from './Modal'
 function Notes({appData,setAppdata}) {
   const [showModal, setShowmodal] = useState(false)
   const promptModal = ()=>{setShowmodal(true)} 
-  console.log(appData,'inside notes');
   return (<>
   <Modal showModal={showModal}><Addnote appData={appData} setAppdata={setAppdata} setShowmodal={setShowmodal}/></Modal>
     <div className="main_notes">
@@ -23,8 +22,7 @@ function Notes({appData,setAppdata}) {
         <div className="addNote" onClick={promptModal}>Add New Note</div>
         <div className="notes">
             {appData.data.notes.map((elem)=>{
-              console.log(elem);
-              return <Note title={elem.title} key={elem.id} note={elem.note} date={elem.date} />
+              return <Note title={elem.title} key={elem.id} id={elem.id} note={elem.note} date={elem.date} appData={appData} setAppdata={setAppdata} Modal={Modal}/>
             })}
         </div>
       </div>

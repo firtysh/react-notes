@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 200ms ease-in-out;
-    /* overflow: hidden; */
 }
 .main_home {
     height: 100vh;
@@ -23,7 +22,6 @@
     position: relative;
     overflow: hidden;
 }
-
 .topContainer {
     width: 100%;
     height: 230px;
@@ -52,9 +50,7 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 30px;
     padding-top: 20px;
-    
 }
-
 .backdrop {
     width: 150%;
     height: 550px;
@@ -83,7 +79,6 @@
     padding: 0px 30px;
     justify-content: center;
 }
-
 .input {
     height: 42px;
     line-height: 2;
@@ -96,17 +91,14 @@
     font-weight: 400;
     color: #07C8F9;
 }
-
 .input::placeholder {
     color: #09a5f367;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .input:focus {
     outline: none;
     border-bottom: 3px solid #0C63E7;
 }
-
 .btn {
     margin-top: 30px;
     height: 40px;
@@ -119,7 +111,6 @@
     border:3px solid transparent;
     transition: all 100ms ease-in-out;
 }
-
 .btn:hover {
     border:3px solid #0C63E7;
     box-shadow: 0 0 5px #07C8F9;

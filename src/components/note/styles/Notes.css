@@ -7,7 +7,6 @@
     position: relative;
     overflow: hidden;
 }
-
 .notesBackdrop1 {
     overflow: hidden;
     position: absolute;
@@ -21,7 +20,6 @@
     transform: rotate(-5deg);
     z-index: -1;
 }
-
 .notesBackdrop2 {
     overflow: hidden;
     position: absolute;
@@ -34,7 +32,6 @@
     background: linear-gradient(241deg, rgba(13, 65, 225, 1) 0%, rgba(7, 200, 249, 1) 90%);
     z-index: -1;
 }
-
 .container {
     width: 85vw;
     display: flex;
@@ -43,7 +40,6 @@
     overflow: hidden;
     padding: 10px;
 }
-
 .header {
     margin: 50px auto;
     width: 95%;
@@ -57,7 +53,6 @@
     text-shadow: 0 0 5px #07c8f92c;
     mix-blend-mode: color-dodge;
 }
-
 .searchContainer {
     width: 70%;
     display: flex;
@@ -66,7 +61,6 @@
     border-radius: 77px;
     box-shadow: 0 0 5px #07c8f92c;
 }
-
 .searchInput {
     outline: none;
     border: none;
@@ -78,13 +72,11 @@
     color: #07C8F9;
     font-weight: 500;
 }
-
 .searchLogo {
     margin: auto;
     padding: 0px 13px;
     border-left: 1px solid #07C8F9;
 }
-
 .notes {
     width: 95%;
     height: 100%;
@@ -94,7 +86,6 @@
     flex-wrap: wrap;
     overflow-y: auto;
 }
-
 .note {
     min-height: 200px;
     flex: 100%;
@@ -103,7 +94,6 @@
     margin: 7px;
     border-radius: 7px;
 }
-
 .note_title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -114,7 +104,6 @@
     font-size: 17px;
     min-height: 50px;
 }
-
 .note_body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 13px;
@@ -124,7 +113,6 @@
     min-height: 100px;
     text-align: justify;
 }
-
 .note_footer {
     display: flex;
     justify-content: space-between;
@@ -133,7 +121,6 @@
     background-color: #0ac6f652;
     border-radius: 0px 0px 7px 7px;
 }
-
 .note_time {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 10px;
@@ -151,12 +138,9 @@
     border-radius: 5px;
     padding: 7px;
 }
-
 hr {
     border: .5px solid #07c8f99d;
 }
-
-
 .form_addNote {
     display: flex;
     min-width: 50vw;
@@ -165,29 +149,24 @@ hr {
     border: 2px solid white;
     border-radius: 7px;
 }
-
 .input_addNote {
     padding: 7px 13px;
     border-radius: 7px;
     outline: none;
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
-
 .input_addNote:first-child {
     border-radius: 7px 7px 0px 0px;
     border-bottom: 1px solid #07c8f97d;
     font-weight: bold;
 }
-
 .input_addNote:nth-child(2) {
     resize: none;
     word-break: break-word;
     min-height: 30vh;
     border-radius: 0px 0px 7px 7px;
 }
-
 .color-select {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 15px;
@@ -195,7 +174,6 @@ hr {
     align-items: center;
     color: white;
 }
-
 .color-select select {
     width: 200px;
     background: #0ac6f652;
@@ -205,16 +183,12 @@ hr {
     margin-left: 10px;
     font-size: 15px;
 }
-
 .color1 {
     background: #0ac6f652;
 }
-
 .btns {
     margin-left: auto;
-
 }
-
 .btns button {
     padding: 10px;
     margin-left: 10px;
@@ -229,7 +203,6 @@ hr {
     background: #07C8F9;
     color: white;
 }
-
 .addNote {
     border-bottom: 4px solid transparent;
     box-shadow: 0 0 5px #07c8f95f;
@@ -245,14 +218,12 @@ hr {
     transition: all 300ms ease-in-out;
     mix-blend-mode: color-dodge;
 }
-
 .addNote:hover {
     border-bottom: 4px solid #0D41E1;
     box-shadow: 0 0 7px #07c8f93e;
     text-shadow: 0 0 5px #07c8f93e;
     color: #0D41E1
 }
-
 .modal {
     position: fixed;
     top: 0;
@@ -266,30 +237,16 @@ hr {
     backdrop-filter: blur(3px);
     z-index: 20;
 }
-
 .modal_main {
     position: fixed;
 }
-
-
-
-
-
-.d-none {
-    display: none;
-}
-
-
 ::-webkit-scrollbar {
     width: 5px;
-    /* background: transparent; */
 }
-
 ::-webkit-scrollbar-track {
     background: #07c8f910;
     border-radius: 99px;
 }
-
 ::-webkit-scrollbar-thumb {
     background: #07C8F9;
     border-radius: 99px;

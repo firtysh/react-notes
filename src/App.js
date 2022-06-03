@@ -3,10 +3,6 @@ import Protected from "./components/Protected";
 import Notes from "./components/note/Notes";
 import Home from "./components/home/Home";
 import { useState } from "react";
-
-
-
-
 function App() {
   let storageData;
   try {
@@ -14,8 +10,6 @@ function App() {
   }catch(e){};
   const [appData,setAppdata] = useState({data: storageData,set:(data)=>{localStorage.setItem('NotesAppData',JSON.stringify(data))}})
   const loggedIn = storageData?.flag===true;
-  console.log('app rendered');
-  console.log(appData,'inside app');
   return (
     <Routes>
     <Route exact path="/" element={<Protected redirect={loggedIn} path="/notes"><Home setAppdata={setAppdata} appData={appData}/></Protected>} />
