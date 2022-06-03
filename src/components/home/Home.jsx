@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Home.css'
-function Home({ setRerender }) {
-
+function Home({ setRerender,setAppdata,appData }) {
+    console.log(appData,'homw');
     const [name, setName] = useState(
         {
             firstName: '',
@@ -19,21 +19,21 @@ function Home({ setRerender }) {
     };
     const navigate = useNavigate();
     const handleContinue = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         const userData = {
             ...name,
-            notes: [
-                {
-                    id: 1,
-                    title: "Here is your note title",
-                    note: "Here goes your actual note",
-                    color: "#acacca"
-                }
-            ],
+            notes: [],
+            count:0,
             flag: true,
         }
-        localStorage.setItem('NotesAppData', JSON.stringify(userData));
-        setRerender(true)
+        appData.set(userData);
+        setAppdata((prevData)=>{
+            return {
+                ...prevData,
+                data:userData
+            }
+        })
+        // setRerender(true)
         navigate('/notes', { replace: true });
     };
 
